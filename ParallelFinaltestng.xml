@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" thread-count="5" name="Suite">
+ 
+<listeners>
+<listener class-name="Generic_Utilities.ListenerImplementation1"/>
+<listener class-name="Generic_Utilities.ITransform"/>
+</listeners>
+
+<test name="Test1">
+  <classes>
+  <class name="Product.ProductNg2"/>
+  </classes>
+  </test> <!-- Test -->
+
+  <test name="Test2">
+  <classes>
+  <class name="More_Campaigns.CreateCampaignTestNg2"/>
+  </classes>
+  </test> <!-- Test -->
+
+</suite> <!-- Suite -->
