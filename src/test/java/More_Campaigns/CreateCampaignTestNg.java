@@ -116,14 +116,14 @@ public class CreateCampaignTestNg extends BaseClass1{
 	
 	//import from createCampaignsPage(POM)
 	cmpPage.campField(CmpName, BudCost);
-	Thread.sleep(2000);
+	Thread.sleep(3000);
 //--------------------------------------------------------------------------------------------------------------		
 	//xpath for save button
 	// WebElement element = driver.findElement(By.xpath("(//input[@title='Save [Alt+S]'])[2]"));
 	cmpPage.saveButton();
 	Thread.sleep(3000);
 //-------------------------------------------------------------------------------------------------------------	
-	//validation of Campaign name
+	//validation of Campaign name (it is inspecting after campaign name enter)
 	String Actdata = driver.findElement(By.xpath("//span[@id='dtlview_Campaign Name']")).getText();
 	if(Actdata.contains(CmpName)) {
 		System.out.println("pass");

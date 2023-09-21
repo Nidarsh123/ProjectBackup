@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>G:\selenium_workspace(G)\AdvanceSelenium\GroupExecutiontestng.xml</span>
+                    <span>G:\selenium_workspace(G)\AdvanceSelenium\ExtentReportstestng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,45 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,  3 skipped,  2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Product.ProductNg2" class="method navigator-link" hash-for-method="ProductNg2">ProductNg2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Product.ProductNg2" class="method navigator-link" hash-for-method="ProductNg2">ProductNg2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Product.ProductNg2" class="method navigator-link" hash-for-method="ProductNg2">ProductNg2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Product.ProductNg2" class="method navigator-link" hash-for-method="ProductNg2">ProductNg2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,16 +142,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="More_Campaigns.CreateCampaignTestNg" class="method navigator-link" hash-for-method="CreateCampaignTestNg">CreateCampaignTestNg</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="CampaignUsingProduct.CreateCampaignwithProductTestNg" class="method navigator-link" hash-for-method="CreateCampaignwithProductTestNg">CreateCampaignwithProductTestNg</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Organization.CreateOrganizationTestNg" class="method navigator-link" hash-for-method="CreateOrganizationTestNg">CreateOrganizationTestNg</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -133,21 +161,70 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Organization.CreateOrganizationTestNg</span>
+              <img src="failed.png"/>
+              <span class="class-name">Product.ProductNg2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CreateOrganizationTestNg">
-                  </a> <!-- CreateOrganizationTestNg -->
-                  <span class="method-name">CreateOrganizationTestNg</span>
+                  <a name="ProductNg2">
+                  </a> <!-- ProductNg2 -->
+                  <span class="method-name">ProductNg2</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at Product.ProductNg2.ProductNg2(ProductNg2.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">Product.ProductNg2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ProductNg2">
+                  </a> <!-- ProductNg2 -->
+                  <span class="method-name">ProductNg2</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at Product.ProductNg2.ProductNg2(ProductNg2.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ProductNg2">
+                  </a> <!-- ProductNg2 -->
+                  <span class="method-name">ProductNg2</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at Product.ProductNg2.ProductNg2(ProductNg2.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ProductNg2">
+                  </a> <!-- ProductNg2 -->
+                  <span class="method-name">ProductNg2</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at Product.ProductNg2.ProductNg2(ProductNg2.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -178,49 +255,24 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">CampaignUsingProduct.CreateCampaignwithProductTestNg</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="CreateCampaignwithProductTestNg">
-                  </a> <!-- CreateCampaignwithProductTestNg -->
-                  <span class="method-name">CreateCampaignwithProductTestNg</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">G:\selenium_workspace(G)\AdvanceSelenium\GroupExecutiontestng.xml</span>
+            <span class="header-content">G:\selenium_workspace(G)\AdvanceSelenium\ExtentReportstestng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;groups&gt;
-    &lt;run&gt;
-      &lt;include name=&quot;regressionTest&quot;/&gt;
-      &lt;include name=&quot;smokeTest&quot;/&gt;
-    &lt;/run&gt;
-  &lt;/groups&gt;
-  &lt;groups&gt;
-    &lt;run&gt;
-      &lt;include name=&quot;regressionTest&quot;/&gt;
-      &lt;include name=&quot;smokeTest&quot;/&gt;
-    &lt;/run&gt;
-  &lt;/groups&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;Generic_Utilities.Implementation&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Product.ProductNg&quot;/&gt;
-      &lt;class name=&quot;Organization.CreateOrganizationTestNg&quot;/&gt;
       &lt;class name=&quot;More_Campaigns.CreateCampaignTestNg&quot;/&gt;
-      &lt;class name=&quot;CampaignUsingProduct.CreateCampaignwithProductTestNg&quot;/&gt;
+      &lt;class name=&quot;Product.ProductNg&quot;/&gt;
+      &lt;class name=&quot;Product.ProductNg2&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -234,7 +286,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (4 classes)</span>
+                <span class="test-name">Test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -251,24 +303,12 @@
                 <span class="method-in-group-name">CreateCampaignTestNg</span>
                 <br/>
               </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">CreateCampaignwithProductTestNg</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">CreateOrganizationTestNg</span>
-                <br/>
-              </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
               <span class="test-group-name">smokeTest</span>
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">CreateCampaignTestNg</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">CreateCampaignwithProductTestNg</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
@@ -292,23 +332,31 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'CreateCampaignwithProductTestNg')
-data.setCell(0, 2, 'CampaignUsingProduct.CreateCampaignwithProductTestNg')
-data.setCell(0, 3, 41076);
+data.setCell(0, 1, 'CreateCampaignTestNg')
+data.setCell(0, 2, 'More_Campaigns.CreateCampaignTestNg')
+data.setCell(0, 3, 51817);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'ProductNg')
 data.setCell(1, 2, 'Product.ProductNg')
-data.setCell(1, 3, 24745);
+data.setCell(1, 3, 17079);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'CreateCampaignTestNg')
-data.setCell(2, 2, 'More_Campaigns.CreateCampaignTestNg')
-data.setCell(2, 3, 22027);
+data.setCell(2, 1, 'ProductNg2')
+data.setCell(2, 2, 'Product.ProductNg2')
+data.setCell(2, 3, 14793);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'CreateOrganizationTestNg')
-data.setCell(3, 2, 'Organization.CreateOrganizationTestNg')
-data.setCell(3, 3, 19509);
+data.setCell(3, 1, 'ProductNg2')
+data.setCell(3, 2, 'Product.ProductNg2')
+data.setCell(3, 3, 12848);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'ProductNg2')
+data.setCell(4, 2, 'Product.ProductNg2')
+data.setCell(4, 3, 9166);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'ProductNg2')
+data.setCell(5, 2, 'Product.ProductNg2')
+data.setCell(5, 3, 9066);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -328,24 +376,11 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">12 ignored methods</span>
+            <span class="header-content">8 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">Organization.CreateOrganizationTestNg</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">beforeSuite</span>
-                <br/>
-                <span class="ignored-method-name">afterSuite</span>
-                <br/>
-                <span class="ignored-method-name">afterTest</span>
-                <br/>
-                <span class="ignored-method-name">beforeTest</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">More_Campaigns.CreateCampaignTestNg</span>
+              <span class="ignored-class-name">Product.ProductNg</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">afterTest</span>
                 <br/>
@@ -358,15 +393,15 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">CampaignUsingProduct.CreateCampaignwithProductTestNg</span>
+              <span class="ignored-class-name">Product.ProductNg2</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">afterTest</span>
-                <br/>
                 <span class="ignored-method-name">beforeSuite</span>
                 <br/>
                 <span class="ignored-method-name">afterSuite</span>
                 <br/>
                 <span class="ignored-method-name">beforeTest</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -378,114 +413,127 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Product.ProductNg</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">More_Campaigns.CreateCampaignTestNg</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">31 ms</span>
+                <span class="method-start">860 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">69 ms</span>
+                <span class="method-start">879 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">3472 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">ProductNg</span>
-                <span class="method-start">15442 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">40191 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">41839 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Organization.CreateOrganizationTestNg</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">42858 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">45149 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">CreateOrganizationTestNg</span>
-                <span class="method-start">56164 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">75679 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">77406 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">More_Campaigns.CreateCampaignTestNg</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">78115 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">79539 ms</span>
+                <span class="method-start">3684 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">CreateCampaignTestNg</span>
-                <span class="method-start">87611 ms</span>
+                <span class="method-start">11971 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">109640 ms</span>
+                <span class="method-start">63810 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">111373 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">CampaignUsingProduct.CreateCampaignwithProductTestNg</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">112082 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">113291 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">CreateCampaignwithProductTestNg</span>
-                <span class="method-start">122653 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">163730 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">164961 ms</span>
+                <span class="method-start">65663 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Product.ProductNg</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">66672 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">68009 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">ProductNg</span>
+                <span class="method-start">74104 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">91191 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">92474 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Product.ProductNg2</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">93334 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">94939 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">ProductNg2</span>
+                <span class="method-start">101716 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">110791 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">112501 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">ProductNg2</span>
+                <span class="method-start">115078 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">124247 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">125626 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">ProductNg2</span>
+                <span class="method-start">128379 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">141230 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">143222 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ProductNg2</span>
+                <span class="method-start">146975 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">162062 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">More_Campaigns.CreateCampaignTestNg</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">165813 ms</span>
+                <span class="method-start">162344 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">165868 ms</span>
+                <span class="method-start">163238 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

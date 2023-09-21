@@ -117,7 +117,7 @@ public class CreateCampaignTestNg1 extends BaseClass1 {
 	cmpPage.saveButton();
 	Thread.sleep(3000);
 //-------------------------------------------------------------------------------------------------------------	
-	//validation of Campaign name
+	//validation of Campaign name (it is inspecting after campaign name enter)
 	String Actdata = driver.findElement(By.xpath("//span[@id='dtlview_Campaign Name']")).getText();
 	if(Actdata.contains(CmpName)) {
 		System.out.println("pass");

@@ -3,19 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="More_Campaigns.CreateCampaignTestNg2">
+      <class name="Practice.HardAssert1">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="afterTest"/>
-          <include name="beforeClass"/>
-          <include name="afterSuite"/>
-          <include name="afterMethod"/>
-          <include name="beforeTest"/>
-          <include name="afterClass"/>
-          <include name="CreateCampaignTestNg2"/>
-          <include name="beforeSuite"/>
+          <include name="CreateCustomerTest"/>
         </methods>
-      </class> <!-- More_Campaigns.CreateCampaignTestNg2 -->
+      </class> <!-- Practice.HardAssert1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

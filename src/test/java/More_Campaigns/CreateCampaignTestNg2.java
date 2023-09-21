@@ -1,5 +1,7 @@
 package More_Campaigns;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,6 +12,7 @@ import Generic_Utilities.Java_Utility;
 import Generic_Utilities.WebDriver_Utility;
 import POMrepository.CreateCamapaignsPage;
 import POMrepository.HomePage;
+import POMrepository.ValidationPage;
 
 //its is used for RetryAnalyserImplementation
 public class CreateCampaignTestNg2 extends BaseClass1 {
@@ -31,7 +34,7 @@ public class CreateCampaignTestNg2 extends BaseClass1 {
 		CreateCamapaignsPage cmpPage = new CreateCamapaignsPage(driver);
 		cmpPage.clickCampPlus();
 		
-		Assert.assertEquals(false, true);//-----------------------------------------------Add for Listener
+		//Assert.assertEquals(false, true);//-----------------------------------------------Add for Listener
 		
 		//driver.findElement(By.xpath("//img[@alt='Create Campaign...']")).click();
 		Thread.sleep(1000);
@@ -57,18 +60,21 @@ public class CreateCampaignTestNg2 extends BaseClass1 {
 		cmpPage.saveButton();
 		Thread.sleep(3000);
 	//-------------------------------------------------------------------------------------------------------------	
-		//validation of Campaign name
-		String Actdata = driver.findElement(By.xpath("//span[@id='dtlview_Campaign Name']")).getText();
-		if(Actdata.contains(CmpName)) {
-			System.out.println("pass");
-		}
-		else
-		{
-			System.out.println("fail");
-		}
+//		//validation of Campaign name (it is inspecting after campaign name enter)
+//		String Actdata = driver.findElement(By.xpath("//span[@id='dtlview_Campaign Name']")).getText();
+//		if(Actdata.contains(CmpName)) {
+//			System.out.println("pass");
+//		}
+//		else
+//		{
+//			System.out.println("fail");
+//		}
+
+		//alternative method for validation 
+		ValidationPage valid = new ValidationPage(driver);
+		String ActData = valid.getCampValidate().getText();
 		
-//		ValidationPage valid = new ValidationPage(driver);
-//		String actData = valid.validateCamp();
+		Assert.assertEquals(ActData, CmpName);
 		
 		Thread.sleep(2000);
 	//-------------------------------------------------------------------------------------------------------------
